@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoGPT - Base de Datos</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>AutoGPT - Autotrónica</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="detect.html">Detectar Partes</a></li>
+                <li><a href="database.html">Base de Datos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Base de Datos</h2>
+        <table id="dataTable">
+            <thead>
+                <tr>
+                    <th>Modelo del Auto</th>
+                    <th>Año</th>
+                    <th>Transmisión</th>
+                    <th>Código OBD</th>
+                    <th>Descripción OBD</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Aquí se llenarán los datos dinámicamente -->
+            </tbody>
+        </table>
+        <div id="dataModal" class="modal hidden">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <div id="dataDetails">
+                    <!-- Aquí se mostrarán los detalles del registro -->
+                </div>
+                <button id="generateReportButton">Generar Reporte</button>
+                <div id="reportSection" class="hidden">
+                    <h3>Reporte Generado</h3>
+                    <p id="reportContent"></p>
+                    <button id="downloadPdfButton">Descargar PDF</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 AutoGPT. Todos los derechos reservados.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="database.js"></script>
+</body>
+</html>

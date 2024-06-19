@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoGPT - Detectar Partes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>AutoGPT - Autotrónica</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="chat.html">Chat</a></li>
+                <li><a href="detect.html">Detectar Partes</a></li>
+                <li><a href="database.html">Base de Datos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="left">
+            <h2>Tomar Foto y Detectar Partes</h2>
+            <form id="detectForm">
+                <input type="file" id="detectImageInput" accept="image/*">
+                <button type="submit">Detectar Partes</button>
+            </form>
+            <div id="loadingBar" class="hidden">Procesando...</div>
+            <div id="detectResponse">
+                <canvas id="detectionCanvas"></canvas>
+            </div>
+        </section>
+        <section class="right">
+            <h2>Agregar Información del Auto y Código OBD</h2>
+            <form id="carInfoForm">
+                <label for="model">Modelo del Auto:</label>
+                <input type="text" id="model" name="model"><br>
+                <label for="year">Año:</label>
+                <input type="number" id="year" name="year"><br>
+                <label for="transmission">Tipo de Transmisión:</label>
+                <input type="text" id="transmission" name="transmission"><br>
+                <label for="obdCode">Código OBD:</label>
+                <input type="text" id="obdCode" name="obdCode"><br>
+                <label for="obdDescription">Descripción:</label>
+                <textarea id="obdDescription" name="obdDescription"></textarea><br>
+                <button type="submit">Guardar Información</button>
+            </form>
+            <div id="saveMessage" class="hidden">Guardado exitoso</div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 AutoGPT. Todos los derechos reservados.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
